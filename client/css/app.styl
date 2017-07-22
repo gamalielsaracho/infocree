@@ -1,0 +1,29 @@
+/*@import './components/app/index.css'*/
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+/* LARGE. */
+@media only screen and (min-width: 1025px) and (max-width: 1440px){
+	@import './components/menu/lg.styl';
+}
+
+/* MEDIUM. */
+@media only screen and (min-width: 641px) and (max-width: 1025px) {
+	body {
+		border: 1px solid orange;
+	}
+
+	@import './components/menu/md.styl';
+}
+
+/* SMALL. */
+@media only screen and (max-width: 641px){
+	body {
+		border: 1px solid green;
+	}
+
+	@import './components/menu/sm.styl';
+}
