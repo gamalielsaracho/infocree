@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
 
 import Menu from '../Menu'
+import Header from '../Header'
+import Team from '../Team'
 
 class App extends Component {
 	render() {
-		return <div>
+		return <div className='app'>
 			<Menu/>
-			<h1>Hola mundoooo infoOrCree.!</h1>
+			<Header/>
+			<Team/>
 			
 			{ this.props.children }
 		</div>
