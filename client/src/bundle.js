@@ -29660,6 +29660,14 @@
 
 	var _Menu2 = _interopRequireDefault(_Menu);
 
+	var _Header = __webpack_require__(290);
+
+	var _Header2 = _interopRequireDefault(_Header);
+
+	var _Team = __webpack_require__(292);
+
+	var _Team2 = _interopRequireDefault(_Team);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -29682,13 +29690,10 @@
 			value: function render() {
 				return _react2.default.createElement(
 					'div',
-					null,
+					{ className: 'app' },
 					_react2.default.createElement(_Menu2.default, null),
-					_react2.default.createElement(
-						'h1',
-						null,
-						'Hola mundoooo infoOrCree.!'
-					),
+					_react2.default.createElement(_Header2.default, null),
+					_react2.default.createElement(_Team2.default, null),
 					this.props.children
 				);
 			}
@@ -29970,6 +29975,230 @@
 	}(_react.Component);
 
 	exports.default = EventList;
+
+/***/ }),
+/* 290 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _Header = __webpack_require__(291);
+
+	var _Header2 = _interopRequireDefault(_Header);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _Header2.default;
+
+/***/ }),
+/* 291 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Menu = __webpack_require__(284);
+
+	var _Menu2 = _interopRequireDefault(_Menu);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Header = function (_Component) {
+		_inherits(Header, _Component);
+
+		function Header() {
+			_classCallCheck(this, Header);
+
+			return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
+		}
+
+		_createClass(Header, [{
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'div',
+					{ className: 'header' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'header__container__content' },
+						_react2.default.createElement(
+							'p',
+							{ className: 'header__description' },
+							'Somos un grupo de estudiantes del Tercer curso del Bachillerato T\xE9cnico en Inform\xE1tica. Esta p\xE1gina esta enfocada en brindar informaci\xF3n acerca del Bachillerato T\xE9cnico en inform\xE1tica del Centro Regional de Educaci\xF3n Gral. Patricio Escobar, como tambien para motivar a los alumnos interesados en este \xE9nfasis, para una buena elecci\xF3n y tener una noci\xF3n de lo que implica este Bachillerato T\xE9cnico.'
+						)
+					)
+				);
+			}
+		}]);
+
+		return Header;
+	}(_react.Component);
+
+	exports.default = Header;
+
+/***/ }),
+/* 292 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _Team = __webpack_require__(293);
+
+	var _Team2 = _interopRequireDefault(_Team);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _Team2.default;
+
+/***/ }),
+/* 293 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Team = function (_Component) {
+		_inherits(Team, _Component);
+
+		function Team() {
+			_classCallCheck(this, Team);
+
+			return _possibleConstructorReturn(this, (Team.__proto__ || Object.getPrototypeOf(Team)).apply(this, arguments));
+		}
+
+		_createClass(Team, [{
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'div',
+					{ className: 'team' },
+					_react2.default.createElement(
+						'h1',
+						{ className: 'team__title' },
+						'Nuestro Grupo'
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'team__container__members' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'team__member' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'team__member__container__avatar' },
+								_react2.default.createElement('img', { className: 'team__member__avatar', src: 'http://infocree.hol.es/img/seba.jpg' })
+							),
+							_react2.default.createElement(
+								'h3',
+								{ className: 'team__member__name' },
+								'Sebastian Troche'
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'team__member' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'team__member__container__avatar' },
+								_react2.default.createElement('img', { className: 'team__member__avatar', src: 'http://infocree.hol.es/img/karen.jpg' })
+							),
+							_react2.default.createElement(
+								'h3',
+								{ className: 'team__member__name' },
+								'Karen Venialgo'
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'team__member' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'team__member__container__avatar' },
+								_react2.default.createElement('img', { className: 'team__member__avatar', src: 'http://localhost:8080/images/gama.jpg' })
+							),
+							_react2.default.createElement(
+								'h3',
+								{ className: 'team__member__name' },
+								'Gamaliel Saracho'
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'team__member' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'team__member__container__avatar' },
+								_react2.default.createElement('img', { className: 'team__member__avatar', src: 'http://localhost:8080/images/seba.jpg' })
+							),
+							_react2.default.createElement(
+								'h3',
+								{ className: 'team__member__name' },
+								'Lucas Bogado'
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'team__member' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'team__member__container__avatar' },
+								_react2.default.createElement('img', { className: 'team__member__avatar', src: 'http://localhost:8080/images/sora.jpg' })
+							),
+							_react2.default.createElement(
+								'h3',
+								{ className: 'team__member__name' },
+								'Soraya Camara'
+							)
+						)
+					)
+				);
+			}
+		}]);
+
+		return Team;
+	}(_react.Component);
+
+	exports.default = Team;
 
 /***/ })
 /******/ ]);
