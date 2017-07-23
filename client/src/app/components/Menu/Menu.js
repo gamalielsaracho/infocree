@@ -11,22 +11,22 @@ class Menu extends Component {
 					</Link>
 					</li>
 						<li className='menu__btn'>
-					<Link to='/eventos'>
+					<Link to='/asignaturas'>
 							<span className="menu__btn_icon icon-pencil2"></span> Asignaturas
 					</Link>
 						</li>
 						<li className='menu__btn'>
-					<Link to='/eventos'>
+					<Link to='/perfil-alumno'>
 							<span className="menu__btn_icon icon-user-check"></span> Perfil del alumno
 					</Link>
 						</li>
 						<li className='menu__btn'>
-					<Link to='/eventos'>
+					<Link to='/preguntas-frecuentes'>
 							<span className="menu__btn_icon icon-question"></span> Preguntas frecuentes
 					</Link>
 						</li>
 						<li className='menu__btn'>
-					<Link to='/eventos'>
+					<Link to='/promociones-anteriores'>
 							<span className="menu__btn_icon icon-images"></span> Promociones
 					</Link>
 						</li>
