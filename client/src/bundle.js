@@ -29610,23 +29610,23 @@
 
 	var _App2 = _interopRequireDefault(_App);
 
-	var _HomePage = __webpack_require__(297);
+	var _HomePage = __webpack_require__(286);
 
 	var _HomePage2 = _interopRequireDefault(_HomePage);
 
-	var _SubjectListPage = __webpack_require__(294);
+	var _SubjectListPage = __webpack_require__(291);
 
 	var _SubjectListPage2 = _interopRequireDefault(_SubjectListPage);
 
-	var _StudentProfileListPage = __webpack_require__(298);
+	var _StudentProfileListPage = __webpack_require__(294);
 
 	var _StudentProfileListPage2 = _interopRequireDefault(_StudentProfileListPage);
 
-	var _QuestionListPage = __webpack_require__(301);
+	var _QuestionListPage = __webpack_require__(297);
 
 	var _QuestionListPage2 = _interopRequireDefault(_QuestionListPage);
 
-	var _PromotionListPage = __webpack_require__(304);
+	var _PromotionListPage = __webpack_require__(300);
 
 	var _PromotionListPage2 = _interopRequireDefault(_PromotionListPage);
 
@@ -29635,7 +29635,7 @@
 	exports.default = _react2.default.createElement(
 		_reactRouter.Route,
 		{ path: '/', component: _App2.default },
-		_react2.default.createElement(_reactRouter.IndexRoute, { component: _SubjectListPage2.default }),
+		_react2.default.createElement(_reactRouter.IndexRoute, { component: _HomePage2.default }),
 		_react2.default.createElement(_reactRouter.Route, { path: 'asignaturas', component: _SubjectListPage2.default }),
 		_react2.default.createElement(_reactRouter.Route, { path: 'perfil-alumno', component: _StudentProfileListPage2.default }),
 		_react2.default.createElement(_reactRouter.Route, { path: 'preguntas-frecuentes', component: _QuestionListPage2.default }),
@@ -29845,10 +29845,68 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Header = __webpack_require__(287);
+
+	var _Header2 = _interopRequireDefault(_Header);
+
+	var _Team = __webpack_require__(289);
+
+	var _Team2 = _interopRequireDefault(_Team);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var HomePage = function (_Component) {
+		_inherits(HomePage, _Component);
+
+		function HomePage() {
+			_classCallCheck(this, HomePage);
+
+			return _possibleConstructorReturn(this, (HomePage.__proto__ || Object.getPrototypeOf(HomePage)).apply(this, arguments));
+		}
+
+		_createClass(HomePage, [{
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'div',
+					null,
+					_react2.default.createElement(_Header2.default, null),
+					_react2.default.createElement(_Team2.default, null)
+				);
+			}
+		}]);
+
+		return HomePage;
+	}(_react.Component);
+
+	exports.default = HomePage;
+
+/***/ }),
+/* 287 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 
-	var _Header = __webpack_require__(287);
+	var _Header = __webpack_require__(288);
 
 	var _Header2 = _interopRequireDefault(_Header);
 
@@ -29857,7 +29915,7 @@
 	exports.default = _Header2.default;
 
 /***/ }),
-/* 287 */
+/* 288 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29903,6 +29961,11 @@
 						'div',
 						{ className: 'header__container__content' },
 						_react2.default.createElement(
+							'div',
+							{ className: 'header__container__logo' },
+							_react2.default.createElement('img', { className: 'header__logo', src: 'http://infocree.hol.es/img/logo.png' })
+						),
+						_react2.default.createElement(
 							'p',
 							{ className: 'header__description' },
 							'Somos un grupo de estudiantes del Tercer curso del Bachillerato T\xE9cnico en Inform\xE1tica. Esta p\xE1gina esta enfocada en brindar informaci\xF3n acerca del Bachillerato T\xE9cnico en inform\xE1tica del Centro Regional de Educaci\xF3n Gral. Patricio Escobar, como tambien para motivar a los alumnos interesados en este \xE9nfasis, para una buena elecci\xF3n y tener una noci\xF3n de lo que implica este Bachillerato T\xE9cnico.'
@@ -29918,7 +29981,7 @@
 	exports.default = Header;
 
 /***/ }),
-/* 288 */
+/* 289 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29927,7 +29990,7 @@
 	  value: true
 	});
 
-	var _Team = __webpack_require__(289);
+	var _Team = __webpack_require__(290);
 
 	var _Team2 = _interopRequireDefault(_Team);
 
@@ -29936,7 +29999,7 @@
 	exports.default = _Team2.default;
 
 /***/ }),
-/* 289 */
+/* 290 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30063,11 +30126,7 @@
 	exports.default = Team;
 
 /***/ }),
-/* 290 */,
-/* 291 */,
-/* 292 */,
-/* 293 */,
-/* 294 */
+/* 291 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30082,7 +30141,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _SubjectList = __webpack_require__(295);
+	var _SubjectList = __webpack_require__(292);
 
 	var _SubjectList2 = _interopRequireDefault(_SubjectList);
 
@@ -30116,7 +30175,7 @@
 	exports.default = SubjectListPage;
 
 /***/ }),
-/* 295 */
+/* 292 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30125,7 +30184,7 @@
 	  value: true
 	});
 
-	var _SubjectList = __webpack_require__(296);
+	var _SubjectList = __webpack_require__(293);
 
 	var _SubjectList2 = _interopRequireDefault(_SubjectList);
 
@@ -30134,7 +30193,7 @@
 	exports.default = _SubjectList2.default;
 
 /***/ }),
-/* 296 */
+/* 293 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30611,7 +30670,7 @@
 	exports.default = SubjectList;
 
 /***/ }),
-/* 297 */
+/* 294 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30626,65 +30685,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Header = __webpack_require__(286);
-
-	var _Header2 = _interopRequireDefault(_Header);
-
-	var _Team = __webpack_require__(288);
-
-	var _Team2 = _interopRequireDefault(_Team);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var HomePage = function (_Component) {
-		_inherits(HomePage, _Component);
-
-		function HomePage() {
-			_classCallCheck(this, HomePage);
-
-			return _possibleConstructorReturn(this, (HomePage.__proto__ || Object.getPrototypeOf(HomePage)).apply(this, arguments));
-		}
-
-		_createClass(HomePage, [{
-			key: 'render',
-			value: function render() {
-				return _react2.default.createElement(
-					'div',
-					null,
-					_react2.default.createElement(_Header2.default, null),
-					_react2.default.createElement(_Team2.default, null)
-				);
-			}
-		}]);
-
-		return HomePage;
-	}(_react.Component);
-
-	exports.default = HomePage;
-
-/***/ }),
-/* 298 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _StudentProfileList = __webpack_require__(299);
+	var _StudentProfileList = __webpack_require__(295);
 
 	var _StudentProfileList2 = _interopRequireDefault(_StudentProfileList);
 
@@ -30718,7 +30719,7 @@
 	exports.default = StudentProfileListPage;
 
 /***/ }),
-/* 299 */
+/* 295 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30727,7 +30728,7 @@
 	  value: true
 	});
 
-	var _StudentProfileList = __webpack_require__(300);
+	var _StudentProfileList = __webpack_require__(296);
 
 	var _StudentProfileList2 = _interopRequireDefault(_StudentProfileList);
 
@@ -30736,7 +30737,7 @@
 	exports.default = _StudentProfileList2.default;
 
 /***/ }),
-/* 300 */
+/* 296 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30778,6 +30779,220 @@
 						'h1',
 						{ className: 'student-profile-list__title' },
 						'Perfil del Alumno'
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'student-profile-list__container__themes' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'student-profile-list__theme' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'student-profile-list__container__image' },
+								_react2.default.createElement('img', { className: 'student-profile-list__image', src: 'https://cdn-images-1.medium.com/max/800/1*TFyTjyu6jLYrKG0WAcPJWw.jpeg' })
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'student-profile-list__description' },
+								_react2.default.createElement(
+									'h3',
+									{ className: 'student-profile-list__theme-title' },
+									'Emplear conocimientos cient\xEDficos, human\xEDsticos y tecnol\xF3gicos en la pr\xE1ctica laboral de su especialidad y/o prosecuci\xF3n de estudios superiores'
+								),
+								_react2.default.createElement(
+									'ul',
+									{ className: 'student-profile-list__container__items' },
+									_react2.default.createElement(
+										'li',
+										{ className: 'student-profile-list__item' },
+										'Planificar, organizar, conducir y controlar, trabajos en el \xE1rea de su competencia bajo el control y la direcci\xF3n de instancias superiores.'
+									),
+									_react2.default.createElement(
+										'li',
+										{ className: 'student-profile-list__item' },
+										'Analizar y proponer soluciones a problemas inform\xE1ticos acordes a su nivel de preparaci\xF3n.'
+									),
+									_react2.default.createElement(
+										'li',
+										{ className: 'student-profile-list__item' },
+										'Adaptarse a los cambios tecnol\xF3gicos de la especialidad.'
+									)
+								)
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'student-profile-list__theme' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'student-profile-list__description' },
+								_react2.default.createElement(
+									'h3',
+									{ className: 'student-profile-list__theme-title' },
+									'Aplicar con eficiencia y eficacia los conocimientos tecnol\xF3gicos e inform\xE1ticos adquiridos, para la ejecuci\xF3n de trabajos de calidad'
+								),
+								_react2.default.createElement(
+									'ul',
+									{ className: 'student-profile-list__container__items' },
+									_react2.default.createElement(
+										'li',
+										{ className: 'student-profile-list__item' },
+										'Utilizar el pensamiento cr\xEDtico, el m\xE9todo tecnol\xF3gico y cient\xEDfico para el estudio y la resoluci\xF3n de problemas.'
+									),
+									_react2.default.createElement(
+										'li',
+										{ className: 'student-profile-list__item' },
+										'Elaborar presupuestos de los proyectos y/o trabajos que le son encomendados bajo la supervisi\xF3n de instancias superiores.'
+									),
+									_react2.default.createElement(
+										'li',
+										{ className: 'student-profile-list__item' },
+										'Utilizar eficientemente los recursos del hardware, software y la literatura t\xE9cnica correspondiente en formato impreso y/o digital.'
+									)
+								)
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'student-profile-list__container__image' },
+								_react2.default.createElement('img', { className: 'student-profile-list__image', src: 'https://www.exceptionnotfound.net/content/images/2015/04/the-coder.jpg' })
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'student-profile-list__theme' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'student-profile-list__container__image' },
+								_react2.default.createElement('img', { className: 'student-profile-list__image', src: 'https://blogs.adobe.com/digitalmarketing/wp-content/uploads/2015/04/ThinkstockPhotos-477089113-e1429550802497.jpg' })
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'student-profile-list__description' },
+								_react2.default.createElement(
+									'h3',
+									{ className: 'student-profile-list__theme-title' },
+									'Aplicar habilidades y destrezas en el uso y desarrollo de aplicaciones inform\xE1ticas'
+								),
+								_react2.default.createElement(
+									'ul',
+									{ className: 'student-profile-list__container__items' },
+									_react2.default.createElement(
+										'li',
+										{ className: 'student-profile-list__item' },
+										'Manejar con solvencia software de aplicaciones generales.'
+									),
+									_react2.default.createElement(
+										'li',
+										{ className: 'student-profile-list__item' },
+										'Desarrollar programas de aplicaci\xF3n de complejidad b\xE1sica utilizando diversos paradigmas de programaci\xF3n.'
+									),
+									_react2.default.createElement(
+										'li',
+										{ className: 'student-profile-list__item' },
+										'Implementar capacidades emprendedoras para desarrollar proyectos, producir trabajos originales y resolver problemas.'
+									)
+								)
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'student-profile-list__theme' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'student-profile-list__description' },
+								_react2.default.createElement(
+									'h3',
+									{ className: 'student-profile-list__theme-title' },
+									'Desarrollar destrezas generales para el uso y mantenimiento de equipos inform\xE1ticos'
+								),
+								_react2.default.createElement(
+									'ul',
+									{ className: 'student-profile-list__container__items' },
+									_react2.default.createElement(
+										'li',
+										{ className: 'student-profile-list__item' },
+										'Instalar y configurar sistemas inform\xE1ticos b\xE1sicos (hardware y software)'
+									),
+									_react2.default.createElement(
+										'li',
+										{ className: 'student-profile-list__item' },
+										'Realizar mantenimiento t\xE9cnico preventivo y correctivo a equipos, insumos, productos y sistemas inform\xE1ticos b\xE1sicos.'
+									),
+									_react2.default.createElement(
+										'li',
+										{ className: 'student-profile-list__item' },
+										'Asistir para la compra-venta de equipos inform\xE1ticos b\xE1sicos.'
+									),
+									_react2.default.createElement(
+										'li',
+										{ className: 'student-profile-list__item' },
+										'Asistencia t\xE9cnica a usuarios en el uso de sistemas inform\xE1ticos b\xE1sicos.'
+									),
+									_react2.default.createElement(
+										'li',
+										{ className: 'student-profile-list__item' },
+										'Utilizar con eficiencia equipos, procedimientos y t\xE9cnicas habituales en la ejecuci\xF3n de trabajos de instalaci\xF3n y mantenimiento.'
+									),
+									_react2.default.createElement(
+										'li',
+										{ className: 'student-profile-list__item' },
+										'Montar, instalar y configurar una red de complejidad sencilla bajo la supervisi\xF3n de instancias superiores.'
+									)
+								)
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'student-profile-list__container__image' },
+								_react2.default.createElement('img', { className: 'student-profile-list__image', src: 'https://www.orangehilldev.com/wp-content/uploads/2015/03/developer-working-osx.jpg' })
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'student-profile-list__theme' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'student-profile-list__container__image' },
+								_react2.default.createElement('img', { className: 'student-profile-list__image', src: 'http://static4.businessinsider.com/image/58360a81e02ba72a008b61cf-480/happy-programmer-work.jpg' })
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'student-profile-list__description' },
+								_react2.default.createElement(
+									'h3',
+									{ className: 'student-profile-list__theme-title' },
+									'Aplicar el pensamiento cr\xEDtico y la \xE9tica en el manejo de informaciones y en el desempe\xF1o de sus funciones'
+								),
+								_react2.default.createElement(
+									'ul',
+									{ className: 'student-profile-list__container__items' },
+									_react2.default.createElement(
+										'li',
+										{ className: 'student-profile-list__item' },
+										'Aplicar criterios de calidad en los procesos para elaborar trabajos de producci\xF3n de software.'
+									),
+									_react2.default.createElement(
+										'li',
+										{ className: 'student-profile-list__item' },
+										'Comunicar informaciones e ideas en forma creativa, usando con solvencia variedad de medios y de formatos.'
+									),
+									_react2.default.createElement(
+										'li',
+										{ className: 'student-profile-list__item' },
+										'Promover y practicar el uso seguro, legal y responsable de la informaci\xF3n.'
+									),
+									_react2.default.createElement(
+										'li',
+										{ className: 'student-profile-list__item' },
+										'Demostrar actitud positiva frente al uso de las TIC\xB4s como medio de comunicaci\xF3n interpersonal y grupal para apoyar la colaboraci\xF3n, el aprendizaje y la productividad.'
+									),
+									_react2.default.createElement(
+										'li',
+										{ className: 'student-profile-list__item' },
+										'Actuar con \xE9tica y responsabilidad en el manejo de equipos de terceros, instalaci\xF3n de software legal, calidad y veracidad de los componentes a instalar, as\xED como el manejo eficiente de los tiempos para la realizaci\xF3n de los trabajos encomendados.'
+									)
+								)
+							)
+						)
 					)
 				);
 			}
@@ -30789,7 +31004,7 @@
 	exports.default = StudentProfileList;
 
 /***/ }),
-/* 301 */
+/* 297 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30804,7 +31019,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _QuestionList = __webpack_require__(302);
+	var _QuestionList = __webpack_require__(298);
 
 	var _QuestionList2 = _interopRequireDefault(_QuestionList);
 
@@ -30838,7 +31053,7 @@
 	exports.default = QuestionListPage;
 
 /***/ }),
-/* 302 */
+/* 298 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30847,7 +31062,7 @@
 	  value: true
 	});
 
-	var _QuestionList = __webpack_require__(303);
+	var _QuestionList = __webpack_require__(299);
 
 	var _QuestionList2 = _interopRequireDefault(_QuestionList);
 
@@ -30856,7 +31071,7 @@
 	exports.default = _QuestionList2.default;
 
 /***/ }),
-/* 303 */
+/* 299 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30898,6 +31113,64 @@
 						'h1',
 						{ className: 'question-list__title' },
 						'Preguntas'
+					),
+					_react2.default.createElement(
+						'h4',
+						{ className: 'question-list__content__title' },
+						'\xBFQu\xE9 es el Bachillerato T\xE9cnico?'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'question-list__content__description' },
+						'Una modalidad de la Educaci\xF3n Media que tiene como finalidad la formaci\xF3n integral de j\xF3venes centrada en la empleabilidad y emprendibilidad, que los prepare adecuadamente para el ejercicio de una profesi\xF3n. Actualmente se implementan 24 especialidades en todos los departamentos del pa\xEDs, en los sectores industrial, agropecuario y servicios.'
+					),
+					_react2.default.createElement(
+						'h4',
+						{ className: 'question-list__content__title' },
+						'\xBFC\xF3mo se accede al Bachillerato T\xE9cnico?'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'question-list__content__description' },
+						'A trav\xE9s de un proceso de admisi\xF3n que valora de manera equitativa el rendimiento acad\xE9mico obtenido por los postulantes en los tres \xFAltimos a\xF1os de la Educaci\xF3n Escolar B\xE1sica y por otra parte los resultados de un conjunto de pruebas psicot\xE9cnicas.'
+					),
+					_react2.default.createElement(
+						'h4',
+						{ className: 'question-list__content__title' },
+						'\xBFPorqu\xE9 ingresar a un Bachillerato T\xE9cnico?'
+					),
+					_react2.default.createElement(
+						'li',
+						{ className: 'question-list__content__description' },
+						'Porque el desarrollo del pa\xEDs requiere la preparaci\xF3n de j\xF3venes para el campo laboral, con suficiente creatividad, con capacidad de trabajar en equipo y de adaptarse a los constantes cambios.'
+					),
+					_react2.default.createElement('br', null),
+					_react2.default.createElement(
+						'li',
+						{ className: 'question-list__content__description' },
+						'Por las condiciones socioecon\xF3micas actuales, que motivan en muchos j\xF3venes el deseo de ingresar al mundo del trabajo al concluir sus estudios secundarios.'
+					),
+					_react2.default.createElement('br', null),
+					_react2.default.createElement(
+						'li',
+						{ className: 'question-list__content__description' },
+						'Porque al tiempo de ofrecer oportunidades para el acceso de los j\xF3venes al mundo del trabajo, permite la continuidad de los estudios en el nivel superior.'
+					),
+					_react2.default.createElement('br', null),
+					_react2.default.createElement(
+						'li',
+						{ className: 'question-list__content__description' },
+						'Porque la diversidad de especialidades disponibles puede dar respuesta a una amplia gama de intereses vocacionales de los j\xF3venes.'
+					),
+					_react2.default.createElement(
+						'h4',
+						{ className: 'question-list__content__title' },
+						'\xBFQu\xE9 especialidades se ofertan en el Departamento de Itap\xFAa?'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'question-list__content__description' },
+						'Actualmente se implementan 14 especialidades: Contabilidad, Salud, Inform\xE1tica, Agropecuario, Administraci\xF3n de Negocios, Mec\xE1nica General, Ciencias Ambientales, Dise\xF1o Gr\xE1fico y Publicidad, Electricidad, Construcciones Civiles, Electromec\xE1nica, Mec\xE1nica Automotriz, Mercadotecnia y Qu\xEDmica Industrial. Las disciplinas que componen los planes de estudio de estas especialidades y la carga horaria de las mismas se indican en este material.'
 					)
 				);
 			}
@@ -30909,7 +31182,7 @@
 	exports.default = QuestionList;
 
 /***/ }),
-/* 304 */
+/* 300 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30924,7 +31197,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _PromotionList = __webpack_require__(305);
+	var _PromotionList = __webpack_require__(301);
 
 	var _PromotionList2 = _interopRequireDefault(_PromotionList);
 
@@ -30958,7 +31231,7 @@
 	exports.default = PromotionListPage;
 
 /***/ }),
-/* 305 */
+/* 301 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31000,6 +31273,94 @@
 						'h1',
 						{ className: 'promotion-list__title' },
 						'Promociones'
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'promotion-list__container__courses' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'promotion-list__course' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'promotion-list__container__image' },
+								_react2.default.createElement('img', { className: 'promotion-list__image', src: 'http://localhost:8080/images/mahaio.jpg' })
+							),
+							_react2.default.createElement(
+								'h4',
+								{ className: 'promotion-list__course__title' },
+								'2014 MAHAIO'
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'promotion-list__course' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'promotion-list__container__image' },
+								_react2.default.createElement('img', { className: 'promotion-list__image', src: 'http://localhost:8080/images/kala.jpg' })
+							),
+							_react2.default.createElement(
+								'h4',
+								{ className: 'promotion-list__course__title' },
+								'2013 KALAKAUA'
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'promotion-list__course' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'promotion-list__container__image' },
+								_react2.default.createElement('img', { className: 'promotion-list__image', src: 'http://localhost:8080/images/sau.jpg' })
+							),
+							_react2.default.createElement(
+								'h4',
+								{ className: 'promotion-list__course__title' },
+								'2012 SAUKIRIA'
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'promotion-list__course' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'promotion-list__container__image' },
+								_react2.default.createElement('img', { className: 'promotion-list__image', src: 'http://localhost:8080/images/blu.jpg' })
+							),
+							_react2.default.createElement(
+								'h4',
+								{ className: 'promotion-list__course__title' },
+								'2010 BLUETOOTH'
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'promotion-list__course' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'promotion-list__container__image' },
+								_react2.default.createElement('img', { className: 'promotion-list__image', src: 'http://localhost:8080/images/daiki.jpg' })
+							),
+							_react2.default.createElement(
+								'h4',
+								{ className: 'promotion-list__course__title' },
+								'2009 DAIKIRI'
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'promotion-list__course' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'promotion-list__container__image' },
+								_react2.default.createElement('img', { className: 'promotion-list__image', src: 'http://localhost:8080/images/anagus.jpg' })
+							),
+							_react2.default.createElement(
+								'h4',
+								{ className: 'promotion-list__course__title' },
+								'1997 ANAGUS'
+							)
+						)
 					)
 				);
 			}

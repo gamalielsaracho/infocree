@@ -39,25 +39,29 @@ body {
     color: #795548;
   }
   .header {
-    height: 400px;
-    padding-top: 1rem;
+    height: auto;
+    padding: 0.5em;
     background-color: #00bcd4;
     width: auto;
   }
   .header__container__content {
     width: 80%;
     margin: 0 auto;
-    margin-top: 1em;
-    height: 70%;
-    display: flex;
-    align-items: center;
+    height: auto;
+  }
+  .header__container__logo {
+    width: 20%;
+  }
+  .header__logo {
+    max-width: 100% !important;
+    height: auto;
+    display: block;
   }
   .header__description {
     letter-spacing: 0.1rem;
     color: #fff;
     font-family: 'Arimo', sans-serif;
     width: 60%;
-    text-aling: center;
   }
   .team {
     margin: 0 auto;
@@ -168,6 +172,117 @@ body {
   .subject-list__event__activity {
     margin: 0 0 0.5rem 1rem;
   }
+  .student-profile-list {
+    max-width: 1250px;
+    margin: 0 auto;
+  }
+  .student-profile-list__title {
+    text-align: center;
+    font-family: 'Arimo', sans-serif;
+    font-size: 2rem;
+  }
+  .student-profile-list__container__themes {
+/*border: 1px solid;*/
+    margin: 0 auto;
+    width: 95%;
+  }
+  .student-profile-list__theme {
+/*border: 1px solid red;*/
+    margin: 0 auto;
+    margin-bottom: 4em;
+    width: 98%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .student-profile-list__container__image {
+/*border: 1px solid;*/
+/*margin: 0 auto;*/
+    height: auto;
+    width: 40%;
+  }
+  .student-profile-list__image {
+    max-width: 100% !important;
+    height: auto;
+    display: block;
+    border-radius: 0.5em;
+  }
+  .student-profile-list__description {
+/*border: 1px solid;*/
+/*margin: 0 auto;*/
+    margin: 0 0.5em 0 0.5em;
+    width: 700px;
+  }
+  .student-profile-list__theme-title {
+    text-align: justify;
+    font-family: 'Arimo', sans-serif;
+  }
+  .student-profile-list__item {
+    font-size: 1rem;
+    font-family: 'Arimo', sans-serif;
+    margin-bottom: 1em;
+  }
+  .question-list {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 2em;
+    padding: 0 1em 1em 1em;
+  }
+  .question-list__title {
+    font-family: 'Arimo', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+  }
+  .question-list__content__title {
+    font-family: 'Arimo', sans-serif;
+    font-size: 1.1rem;
+    margin-left: 1rem;
+  }
+  .question-list__content__description {
+    font-family: 'Arimo', sans-serif;
+    font-size: 1rem;
+    width: 75%;
+/*margin-bottom: 2em;*/
+  }
+  .promotion-list {
+/*border: 1px solid;*/
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-bottom: 2em;
+  }
+  .promotion-list__title {
+    text-align: center;
+    font-family: 'Arimo', sans-serif;
+  }
+  .promotion-list__container__courses {
+/*border: 1px solid;*/
+    width: auto;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+  }
+  .promotion-list__course {
+/*border: 1px solid red;*/
+    width: 400px;
+    margin: 0.5em;
+    height: auto;
+/*margin-bottom: 1em;*/
+  }
+  .promotion-list__container__image {
+/*border: 1px solid green;*/
+    height: 300px;
+    width: auto;
+  }
+  .promotion-list__image {
+    max-width: 100% !important;
+    height: 100%;
+    display: block;
+  }
+  .promotion-list__course__title {
+    text-align: center;
+    font-family: 'Arimo', sans-serif;
+    font-size: 1.1rem;
+  }
 }
 /* MEDIUM. */
 @media only screen and (min-width: 641px) and (max-width: 1025px) {
@@ -207,18 +322,23 @@ body {
     color: #795548;
   }
   .header {
-    height: 400px;
-    padding-top: 1rem;
+    height: auto;
+    padding: 0.5rem;
     background-color: #00bcd4;
     width: auto;
   }
   .header__container__content {
     width: 80%;
     margin: 0 auto;
-    margin-top: 1em;
-    height: 70%;
-    display: flex;
-    align-items: center;
+    height: auto;
+  }
+  .header__container__logo {
+    width: 20%;
+  }
+  .header__logo {
+    max-width: 100% !important;
+    height: auto;
+    display: block;
   }
   .header__description {
     letter-spacing: 0.1rem;
@@ -337,6 +457,120 @@ body {
   .subject-list__event__activity {
     margin: 0 0 0.5rem 1rem;
   }
+  .student-profile-list {
+/*border: 1px solid;*/
+    max-width: 1250px;
+    margin: 0 auto;
+  }
+  .student-profile-list__title {
+    text-align: center;
+    font-family: 'Arimo', sans-serif;
+  }
+  .student-profile-list__container__themes {
+/*border: 1px solid;*/
+    margin: 0 auto;
+    width: 95%;
+  }
+  .student-profile-list__theme {
+/*border: 1px solid red;*/
+    margin: 0 auto;
+    margin-bottom: 4em;
+    width: 98%;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #56504e;
+    display: flex;
+    justify-content: center;
+  }
+  .student-profile-list__container__image {
+/*border: 1px solid;*/
+/*margin: 0 auto;*/
+    margin-bottom: 0.5em;
+    height: auto;
+    width: 50%;
+  }
+  .student-profile-list__image {
+    max-width: 100% !important;
+    height: auto;
+    display: block;
+    border-radius: 0.5em;
+  }
+  .student-profile-list__description {
+/*border: 1px solid;*/
+/*margin: 0 auto;*/
+    margin: 0 0.5em 0 0.5em;
+    width: 700px;
+  }
+  .student-profile-list__theme-title {
+    text-align: justify;
+    font-family: 'Arimo', sans-serif;
+  }
+  .student-profile-list__item {
+    font-size: 1rem;
+    font-family: 'Arimo', sans-serif;
+    margin-bottom: 1em;
+  }
+  .question-list {
+/*border: 1px solid;*/
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 2em;
+    padding: 0 1em 1em 1em;
+  }
+  .question-list__title {
+    font-family: 'Arimo', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+  }
+  .question-list__content__title {
+    font-family: 'Arimo', sans-serif;
+    font-size: 1.1rem;
+    margin-left: 1rem;
+  }
+  .question-list__content__description {
+    font-family: 'Arimo', sans-serif;
+/*font-size: 1.1rem;*/
+    width: 75%;
+/*margin-bottom: 2em;*/
+  }
+  .promotion-list {
+/*border: 1px solid;*/
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-bottom: 2em;
+  }
+  .promotion-list__title {
+    text-align: center;
+    font-family: 'Arimo', sans-serif;
+  }
+  .promotion-list__container__courses {
+/*border: 1px solid;*/
+    width: auto;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+  }
+  .promotion-list__course {
+    width: 400px;
+    margin: 0.5em;
+    height: auto;
+/*margin-bottom: 1em;*/
+  }
+  .promotion-list__container__image {
+/*border: 1px solid green;*/
+    height: 300px;
+    width: auto;
+  }
+  .promotion-list__image {
+    max-width: 100% !important;
+    height: 100%;
+    display: block;
+  }
+  .promotion-list__course__title {
+    text-align: center;
+    font-family: 'Arimo', sans-serif;
+    font-size: 1.1rem;
+  }
 }
 /* SMALL. */
 @media only screen and (max-width: 641px) {
@@ -377,25 +611,38 @@ body {
     color: #795548;
   }
   .header {
-    height: 300px;
-    padding-top: 1rem;
+    height: auto;
+    padding: 0.5rem;
     background-color: #00bcd4;
     width: auto;
   }
   .header__container__content {
-    border: 1px solid #f00;
-    width: 95%;
+/*border: 1px solid red;*/
+/*padding:.2rem;*/
+    width: auto;
     margin: 0 auto;
+/*margin-top:1em;*/
     height: auto;
-    display: flex;
-    align-items: center;
+/*display:flex;*/
+/*align-items: center;*/
+  }
+  .header__container__logo {
+    width: 30%;
+/*margin-right:1em;*/
+  }
+  .header__logo {
+    max-width: 100% !important;
+    height: auto;
+    display: block;
   }
   .header__description {
-    border: 1px solid #000;
+/*border: 1px solid black;*/
     letter-spacing: 0.1rem;
     color: #fff;
     font-family: 'Arimo', sans-serif;
     width: auto;
+/*padding: .6rem;*/
+    text-align: justify;
   }
   .team {
     margin: 0 auto;
@@ -505,5 +752,114 @@ body {
   }
   .subject-list__event__activity {
     margin: 0 0 0.5rem 1rem;
+  }
+  .student-profile-list {
+/*border: 1px solid;*/
+    max-width: 1250px;
+    margin: 0 auto;
+  }
+  .student-profile-list__title {
+    text-align: center;
+    font-family: 'Arimo', sans-serif;
+  }
+  .student-profile-list__container__themes {
+/*border: 1px solid;*/
+    margin: 0 auto;
+    width: 95%;
+  }
+  .student-profile-list__theme {
+    margin: 0 auto;
+    margin-bottom: 4em;
+    width: auto;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #56504e;
+    display: flex;
+    justify-content: center;
+  }
+  .student-profile-list__container__image {
+/*margin: 0 auto;*/
+    margin-bottom: 0.5em;
+    width: 85%;
+  }
+  .student-profile-list__image {
+    max-width: 100% !important;
+    height: auto;
+    display: block;
+    border-radius: 0.5em;
+  }
+  .student-profile-list__description {
+/*border: 1px solid;*/
+/*margin: 0 auto;*/
+    margin: 0 0.5em 0 0.5em;
+    width: 700px;
+  }
+  .student-profile-list__theme-title {
+    text-align: justify;
+    font-family: 'Arimo', sans-serif;
+  }
+  .student-profile-list__item {
+    font-size: 1rem;
+    font-family: 'Arimo', sans-serif;
+    margin-bottom: 1em;
+  }
+  .question-list {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 2em;
+    padding: 0 1em 1em 1em;
+  }
+  .question-list__title {
+    font-family: 'Arimo', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+  }
+  .question-list__content__title {
+    font-family: 'Arimo', sans-serif;
+    font-size: 1.1rem;
+    margin-left: 1rem;
+  }
+  .question-list__content__description {
+    font-family: 'Arimo', sans-serif;
+/*font-size: 1.1rem;*/
+    width: auto;
+/*margin-bottom: 2em;*/
+  }
+  .promotion-list {
+/*border: 1px solid;*/
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-bottom: 2em;
+  }
+  .promotion-list__title {
+    text-align: center;
+    font-family: 'Arimo', sans-serif;
+  }
+  .promotion-list__container__courses {
+/*border: 1px solid;*/
+    width: auto;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+  }
+  .promotion-list__course {
+    width: auto;
+    margin: 0.5em;
+    height: auto;
+/*margin-bottom: 1em;*/
+  }
+  .promotion-list__container__image {
+    height: auto;
+    width: auto;
+  }
+  .promotion-list__image {
+    max-width: 100% !important;
+    height: auto;
+    display: block;
+  }
+  .promotion-list__course__title {
+    text-align: center;
+    font-family: 'Arimo', sans-serif;
+    font-size: 1.1rem;
   }
 }
