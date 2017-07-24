@@ -12,7 +12,7 @@ import PromotionListPage from './promotion/pages/PromotionListPage'
 
 export default (
 	<Route path='/' component={AppContainer}>
-		<IndexRoute component={SubjectListPage}/>
+		<IndexRoute component={HomePage}/>
 		<Route path='asignaturas' component={SubjectListPage}/>
 		<Route path='perfil-alumno' component={StudentProfileListPage}/>
 		<Route path='preguntas-frecuentes' component={QuestionListPage}/>
