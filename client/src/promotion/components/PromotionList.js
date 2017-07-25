@@ -7,37 +7,37 @@ class PromotionList extends Component {
 			<div className='promotion-list__container__courses'>
 				<div className='promotion-list__course'>
 					<div className='promotion-list__container__image'>
-						<img className='promotion-list__image' src='http://localhost:8080/images/mahaio.jpg'/>
+						<img className='promotion-list__image' src='http://infocree.hol.es/images/mahaio.jpg'/>
 					</div>
 					<h4 className='promotion-list__course__title'>2014 MAHAIO</h4>
 				</div>
 				<div className='promotion-list__course'>
 					<div className='promotion-list__container__image'>
-						<img className='promotion-list__image' src='http://localhost:8080/images/kala.jpg'/>
+						<img className='promotion-list__image' src='http://infocree.hol.es/images/kala.jpg'/>
 					</div>
 					<h4 className='promotion-list__course__title'>2013 KALAKAUA</h4>
 				</div>
 				<div className='promotion-list__course'>
 					<div className='promotion-list__container__image'>
-						<img className='promotion-list__image' src='http://localhost:8080/images/sau.jpg'/>
+						<img className='promotion-list__image' src='http://infocree.hol.es/images/sau.jpg'/>
 					</div>
 					<h4 className='promotion-list__course__title'>2012 SAUKIRIA</h4>
 				</div>
 				<div className='promotion-list__course'>
 					<div className='promotion-list__container__image'>
-						<img className='promotion-list__image' src='http://localhost:8080/images/blu.jpg'/>
+						<img className='promotion-list__image' src='http://infocree.hol.es/images/blu.jpg'/>
 					</div>
 					<h4 className='promotion-list__course__title'>2010 BLUETOOTH</h4>
 				</div>
 				<div className='promotion-list__course'>
 					<div className='promotion-list__container__image'>
-						<img className='promotion-list__image' src='http://localhost:8080/images/daiki.jpg'/>
+						<img className='promotion-list__image' src='http://infocree.hol.es/images/daiki.jpg'/>
 					</div>
 					<h4 className='promotion-list__course__title'>2009 DAIKIRI</h4>
 				</div>
 				<div className='promotion-list__course'>
 					<div className='promotion-list__container__image'>
-						<img className='promotion-list__image' src='http://localhost:8080/images/anagus.jpg'/>
+						<img className='promotion-list__image' src='http://infocree.hol.es/images/anagus.jpg'/>
 					</div>
 					<h4 className='promotion-list__course__title'>1997 ANAGUS</h4>
 				</div>
