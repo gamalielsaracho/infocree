@@ -8,31 +8,31 @@ class Team extends Component {
 				
 				<div className='team__member'>
 					<div className='team__member__container__avatar'>
-						<img className='team__member__avatar' src='http://infocree.hol.es/img/seba.jpg'/>
+						<img className='team__member__avatar' src='http://infocree.hol.es/images/seba.jpg'/>
 					</div>
 					<h3 className='team__member__name'>Sebastian Troche</h3>
 				</div>
 				<div className='team__member'>
 					<div className='team__member__container__avatar'>
-						<img className='team__member__avatar' src='http://infocree.hol.es/img/karen.jpg'/>
+						<img className='team__member__avatar' src='http://infocree.hol.es/images/karen.jpg'/>
 					</div>
 					<h3 className='team__member__name'>Karen Venialgo</h3>
 				</div>
 				<div className='team__member'>
 					<div className='team__member__container__avatar'>
-						<img className='team__member__avatar' src='http://localhost:8080/images/gama.jpg'/>
+						<img className='team__member__avatar' src='http://infocree.hol.es/images/gama.jpg'/>
 					</div>
 					<h3 className='team__member__name'>Gamaliel Saracho</h3>
 				</div>
 				<div className='team__member'>
 					<div className='team__member__container__avatar'>
-						<img className='team__member__avatar' src='http://localhost:8080/images/seba.jpg'/>
+						<img className='team__member__avatar' src='http://infocree.hol.es/images/lucas.png'/>
 					</div>
 					<h3 className='team__member__name'>Lucas Bogado</h3>
 				</div>
 				<div className='team__member'>
 					<div className='team__member__container__avatar'>
-						<img className='team__member__avatar' src='http://localhost:8080/images/sora.jpg'/>
+						<img className='team__member__avatar' src='http://infocree.hol.es/images/sora.jpg'/>
 					</div>
 					<h3 className='team__member__name'>Soraya Camara</h3>
 				</div>
