@@ -29610,23 +29610,23 @@
 
 	var _App2 = _interopRequireDefault(_App);
 
-	var _HomePage = __webpack_require__(286);
+	var _HomePage = __webpack_require__(288);
 
 	var _HomePage2 = _interopRequireDefault(_HomePage);
 
-	var _SubjectListPage = __webpack_require__(291);
+	var _SubjectListPage = __webpack_require__(295);
 
 	var _SubjectListPage2 = _interopRequireDefault(_SubjectListPage);
 
-	var _StudentProfileListPage = __webpack_require__(294);
+	var _StudentProfileListPage = __webpack_require__(298);
 
 	var _StudentProfileListPage2 = _interopRequireDefault(_StudentProfileListPage);
 
-	var _QuestionListPage = __webpack_require__(297);
+	var _QuestionListPage = __webpack_require__(301);
 
 	var _QuestionListPage2 = _interopRequireDefault(_QuestionListPage);
 
-	var _PromotionListPage = __webpack_require__(300);
+	var _PromotionListPage = __webpack_require__(304);
 
 	var _PromotionListPage2 = _interopRequireDefault(_PromotionListPage);
 
@@ -29682,7 +29682,7 @@
 
 	var _Menu2 = _interopRequireDefault(_Menu);
 
-	var _Footer = __webpack_require__(302);
+	var _Footer = __webpack_require__(286);
 
 	var _Footer2 = _interopRequireDefault(_Footer);
 
@@ -29768,19 +29768,120 @@
 	var Menu = function (_Component) {
 		_inherits(Menu, _Component);
 
-		function Menu() {
+		function Menu(props) {
 			_classCallCheck(this, Menu);
 
-			return _possibleConstructorReturn(this, (Menu.__proto__ || Object.getPrototypeOf(Menu)).apply(this, arguments));
+			var _this = _possibleConstructorReturn(this, (Menu.__proto__ || Object.getPrototypeOf(Menu)).call(this, props));
+
+			_this.state = {
+				windowWidth: window.innerWidth,
+				mobileNavVisible: false
+			};
+			return _this;
 		}
 
 		_createClass(Menu, [{
-			key: 'render',
-			value: function render() {
+			key: 'handleResize',
+			value: function handleResize() {
+				this.setState({ windowWidth: window.innerWidth });
+			}
+		}, {
+			key: 'componentDidMount',
+			value: function componentDidMount() {
+				window.addEventListener('resize', this.handleResize.bind(this));
+			}
+		}, {
+			key: 'componentWillUnmount',
+			value: function componentWillUnmount() {
+				window.removeEventListener('resize', this.handleResize.bind(this));
+			}
+		}, {
+			key: 'navigationLinks',
+			value: function navigationLinks() {
+				// MOVIL MENU.
 				return _react2.default.createElement(
-					'div',
-					{ className: 'menu' },
+					'ul',
+					{ className: 'menu__btn' },
 					_react2.default.createElement(
+						'li',
+						{ className: 'menu__btn' },
+						_react2.default.createElement(
+							_reactRouter.Link,
+							{ to: '/' },
+							_react2.default.createElement('span', { className: 'menu__btn_icon icon-home3' }),
+							' Home'
+						)
+					),
+					_react2.default.createElement(
+						'li',
+						{ className: 'menu__btn' },
+						_react2.default.createElement(
+							_reactRouter.Link,
+							{ to: '/asignaturas' },
+							_react2.default.createElement('span', { className: 'menu__btn_icon icon-pencil2' }),
+							' Asignaturas'
+						)
+					),
+					_react2.default.createElement(
+						'li',
+						{ className: 'menu__btn' },
+						_react2.default.createElement(
+							_reactRouter.Link,
+							{ to: '/perfil-alumno' },
+							_react2.default.createElement('span', { className: 'menu__btn_icon icon-user-check' }),
+							' Perfil del alumno'
+						)
+					),
+					_react2.default.createElement(
+						'li',
+						{ className: 'menu__btn' },
+						_react2.default.createElement(
+							_reactRouter.Link,
+							{ to: '/preguntas-frecuentes' },
+							_react2.default.createElement('span', { className: 'menu__btn_icon icon-question' }),
+							' Preguntas frecuentes'
+						)
+					),
+					_react2.default.createElement(
+						'li',
+						{ className: 'menu__btn' },
+						_react2.default.createElement(
+							_reactRouter.Link,
+							{ to: '/promociones-anteriores' },
+							_react2.default.createElement('span', { className: 'menu__btn_icon icon-images' }),
+							' Promociones'
+						)
+					)
+				);
+			}
+		}, {
+			key: 'renderMobileNav',
+			value: function renderMobileNav() {
+				if (this.state.mobileNavVisible) {
+					return this.navigationLinks();
+				}
+			}
+		}, {
+			key: 'handleNavClick',
+			value: function handleNavClick() {
+				if (!this.state.mobileNavVisible) {
+					this.setState({ mobileNavVisible: true });
+				} else {
+					this.setState({ mobileNavVisible: false });
+				}
+			}
+		}, {
+			key: 'renderNavigation',
+			value: function renderNavigation() {
+				if (this.state.windowWidth <= 635) {
+					return _react2.default.createElement(
+						'nav',
+						{ className: 'menu__btn__list' },
+						_react2.default.createElement('span', { className: 'menu__btn_icon--responsive icon-indent-increase', onClick: this.handleNavClick.bind(this) }),
+						this.renderMobileNav()
+					);
+				} else {
+					return _react2.default.createElement(
 						'nav',
 						{ className: 'menu__btn__list' },
 						_react2.default.createElement(
@@ -29833,7 +29934,16 @@
 								' Promociones'
 							)
 						)
-					)
+					);
+				}
+			}
+		}, {
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'div',
+					{ className: 'menu' },
+					this.renderNavigation()
 				);
 			}
 		}]);
@@ -29850,6 +29960,24 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _Footer = __webpack_require__(287);
+
+	var _Footer2 = _interopRequireDefault(_Footer);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _Footer2.default;
+
+/***/ }),
+/* 287 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
 
@@ -29859,15 +29987,91 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Header = __webpack_require__(287);
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Footer = function (_Component) {
+		_inherits(Footer, _Component);
+
+		function Footer() {
+			_classCallCheck(this, Footer);
+
+			return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
+		}
+
+		_createClass(Footer, [{
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'footer',
+					{ className: 'footer' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'footer__container' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'footer__content' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'footer__container__center' },
+								_react2.default.createElement(
+									'p',
+									{ className: 'footer__date' },
+									'2014-2017'
+								)
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'footer__content' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'footer__container__center footer__container__center--mobile-justify' },
+								_react2.default.createElement('span', { className: 'footer__social__network__icon icon-facebook2' }),
+								_react2.default.createElement('span', { className: 'footer__social__network__icon icon-twitter' }),
+								_react2.default.createElement('span', { className: 'footer__social__network__icon\r footer__social__network__icon--black \r icon-github' })
+							)
+						)
+					)
+				);
+			}
+		}]);
+
+		return Footer;
+	}(_react.Component);
+
+	exports.default = Footer;
+
+/***/ }),
+/* 288 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Header = __webpack_require__(289);
 
 	var _Header2 = _interopRequireDefault(_Header);
 
-	var _Team = __webpack_require__(289);
+	var _Team = __webpack_require__(291);
 
 	var _Team2 = _interopRequireDefault(_Team);
 
-	var _WatchVideo = __webpack_require__(304);
+	var _WatchVideo = __webpack_require__(293);
 
 	var _WatchVideo2 = _interopRequireDefault(_WatchVideo);
 
@@ -29907,7 +30111,7 @@
 	exports.default = HomePage;
 
 /***/ }),
-/* 287 */
+/* 289 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29916,7 +30120,7 @@
 	  value: true
 	});
 
-	var _Header = __webpack_require__(288);
+	var _Header = __webpack_require__(290);
 
 	var _Header2 = _interopRequireDefault(_Header);
 
@@ -29925,7 +30129,7 @@
 	exports.default = _Header2.default;
 
 /***/ }),
-/* 288 */
+/* 290 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29973,7 +30177,7 @@
 						_react2.default.createElement(
 							'div',
 							{ className: 'header__container__logo' },
-							_react2.default.createElement('img', { className: 'header__logo', src: 'http://infocree.hol.es/img/logo.png' })
+							_react2.default.createElement('img', { className: 'header__logo', src: 'http://infocree.hol.es/images/logo.png' })
 						),
 						_react2.default.createElement(
 							'p',
@@ -29991,7 +30195,7 @@
 	exports.default = Header;
 
 /***/ }),
-/* 289 */
+/* 291 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30000,7 +30204,7 @@
 	  value: true
 	});
 
-	var _Team = __webpack_require__(290);
+	var _Team = __webpack_require__(292);
 
 	var _Team2 = _interopRequireDefault(_Team);
 
@@ -30009,7 +30213,7 @@
 	exports.default = _Team2.default;
 
 /***/ }),
-/* 290 */
+/* 292 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30061,7 +30265,7 @@
 							_react2.default.createElement(
 								'div',
 								{ className: 'team__member__container__avatar' },
-								_react2.default.createElement('img', { className: 'team__member__avatar', src: 'http://infocree.hol.es/img/seba.jpg' })
+								_react2.default.createElement('img', { className: 'team__member__avatar', src: 'http://infocree.hol.es/images/seba.jpg' })
 							),
 							_react2.default.createElement(
 								'h3',
@@ -30075,7 +30279,7 @@
 							_react2.default.createElement(
 								'div',
 								{ className: 'team__member__container__avatar' },
-								_react2.default.createElement('img', { className: 'team__member__avatar', src: 'http://infocree.hol.es/img/karen.jpg' })
+								_react2.default.createElement('img', { className: 'team__member__avatar', src: 'http://infocree.hol.es/images/karen.jpg' })
 							),
 							_react2.default.createElement(
 								'h3',
@@ -30089,7 +30293,7 @@
 							_react2.default.createElement(
 								'div',
 								{ className: 'team__member__container__avatar' },
-								_react2.default.createElement('img', { className: 'team__member__avatar', src: 'http://localhost:8080/images/gama.jpg' })
+								_react2.default.createElement('img', { className: 'team__member__avatar', src: 'http://infocree.hol.es/images/gama.jpg' })
 							),
 							_react2.default.createElement(
 								'h3',
@@ -30103,7 +30307,7 @@
 							_react2.default.createElement(
 								'div',
 								{ className: 'team__member__container__avatar' },
-								_react2.default.createElement('img', { className: 'team__member__avatar', src: 'http://localhost:8080/images/seba.jpg' })
+								_react2.default.createElement('img', { className: 'team__member__avatar', src: 'http://infocree.hol.es/images/lucas.png' })
 							),
 							_react2.default.createElement(
 								'h3',
@@ -30117,7 +30321,7 @@
 							_react2.default.createElement(
 								'div',
 								{ className: 'team__member__container__avatar' },
-								_react2.default.createElement('img', { className: 'team__member__avatar', src: 'http://localhost:8080/images/sora.jpg' })
+								_react2.default.createElement('img', { className: 'team__member__avatar', src: 'http://infocree.hol.es/images/sora.jpg' })
 							),
 							_react2.default.createElement(
 								'h3',
@@ -30136,7 +30340,25 @@
 	exports.default = Team;
 
 /***/ }),
-/* 291 */
+/* 293 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _WatchVideo = __webpack_require__(294);
+
+	var _WatchVideo2 = _interopRequireDefault(_WatchVideo);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _WatchVideo2.default;
+
+/***/ }),
+/* 294 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30151,7 +30373,56 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _SubjectList = __webpack_require__(292);
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var WatchVideo = function (_Component) {
+		_inherits(WatchVideo, _Component);
+
+		function WatchVideo() {
+			_classCallCheck(this, WatchVideo);
+
+			return _possibleConstructorReturn(this, (WatchVideo.__proto__ || Object.getPrototypeOf(WatchVideo)).apply(this, arguments));
+		}
+
+		_createClass(WatchVideo, [{
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'div',
+					{ className: 'watch-video' },
+					_react2.default.createElement('iframe', { className: 'watch-video__play', src: 'https://www.youtube.com/embed/8lp20JFiB4s' })
+				);
+			}
+		}]);
+
+		return WatchVideo;
+	}(_react.Component);
+
+	exports.default = WatchVideo;
+
+/***/ }),
+/* 295 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _SubjectList = __webpack_require__(296);
 
 	var _SubjectList2 = _interopRequireDefault(_SubjectList);
 
@@ -30185,7 +30456,7 @@
 	exports.default = SubjectListPage;
 
 /***/ }),
-/* 292 */
+/* 296 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30194,7 +30465,7 @@
 	  value: true
 	});
 
-	var _SubjectList = __webpack_require__(293);
+	var _SubjectList = __webpack_require__(297);
 
 	var _SubjectList2 = _interopRequireDefault(_SubjectList);
 
@@ -30203,7 +30474,7 @@
 	exports.default = _SubjectList2.default;
 
 /***/ }),
-/* 293 */
+/* 297 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30680,7 +30951,7 @@
 	exports.default = SubjectList;
 
 /***/ }),
-/* 294 */
+/* 298 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30695,7 +30966,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _StudentProfileList = __webpack_require__(295);
+	var _StudentProfileList = __webpack_require__(299);
 
 	var _StudentProfileList2 = _interopRequireDefault(_StudentProfileList);
 
@@ -30729,7 +31000,7 @@
 	exports.default = StudentProfileListPage;
 
 /***/ }),
-/* 295 */
+/* 299 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30738,7 +31009,7 @@
 	  value: true
 	});
 
-	var _StudentProfileList = __webpack_require__(296);
+	var _StudentProfileList = __webpack_require__(300);
 
 	var _StudentProfileList2 = _interopRequireDefault(_StudentProfileList);
 
@@ -30747,7 +31018,7 @@
 	exports.default = _StudentProfileList2.default;
 
 /***/ }),
-/* 296 */
+/* 300 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30799,7 +31070,7 @@
 							_react2.default.createElement(
 								'div',
 								{ className: 'student-profile-list__container__image' },
-								_react2.default.createElement('img', { className: 'student-profile-list__image', src: 'https://cdn-images-1.medium.com/max/800/1*TFyTjyu6jLYrKG0WAcPJWw.jpeg' })
+								_react2.default.createElement('img', { className: 'student-profile-list__image', src: 'http://infocree.hol.es/images/planificar-organizar-conducir-controlar.jpeg' })
 							),
 							_react2.default.createElement(
 								'div',
@@ -30864,7 +31135,7 @@
 							_react2.default.createElement(
 								'div',
 								{ className: 'student-profile-list__container__image' },
-								_react2.default.createElement('img', { className: 'student-profile-list__image', src: 'https://www.exceptionnotfound.net/content/images/2015/04/the-coder.jpg' })
+								_react2.default.createElement('img', { className: 'student-profile-list__image', src: 'http://infocree.hol.es/images/cientifico-para-el-estudio-y-la-resolucion-de-problemas.jpg' })
 							)
 						),
 						_react2.default.createElement(
@@ -30873,7 +31144,7 @@
 							_react2.default.createElement(
 								'div',
 								{ className: 'student-profile-list__container__image' },
-								_react2.default.createElement('img', { className: 'student-profile-list__image', src: 'https://blogs.adobe.com/digitalmarketing/wp-content/uploads/2015/04/ThinkstockPhotos-477089113-e1429550802497.jpg' })
+								_react2.default.createElement('img', { className: 'student-profile-list__image', src: 'http://infocree.hol.es/images/manejar-con-solvencia-software-de-aplicaciones-generales.jpg' })
 							),
 							_react2.default.createElement(
 								'div',
@@ -30953,7 +31224,7 @@
 							_react2.default.createElement(
 								'div',
 								{ className: 'student-profile-list__container__image' },
-								_react2.default.createElement('img', { className: 'student-profile-list__image', src: 'https://www.orangehilldev.com/wp-content/uploads/2015/03/developer-working-osx.jpg' })
+								_react2.default.createElement('img', { className: 'student-profile-list__image', src: 'http://infocree.hol.es/images/utilizar-con-eficiencia-equipos-procedimientos-y-t%C3%A9cnicas.jpg' })
 							)
 						),
 						_react2.default.createElement(
@@ -30962,7 +31233,7 @@
 							_react2.default.createElement(
 								'div',
 								{ className: 'student-profile-list__container__image' },
-								_react2.default.createElement('img', { className: 'student-profile-list__image', src: 'http://static4.businessinsider.com/image/58360a81e02ba72a008b61cf-480/happy-programmer-work.jpg' })
+								_react2.default.createElement('img', { className: 'student-profile-list__image', src: 'http://infocree.hol.es/images/aplicar-criterios-de-calidad-en-los-procesos.jpg' })
 							),
 							_react2.default.createElement(
 								'div',
@@ -31014,7 +31285,7 @@
 	exports.default = StudentProfileList;
 
 /***/ }),
-/* 297 */
+/* 301 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31029,7 +31300,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _QuestionList = __webpack_require__(298);
+	var _QuestionList = __webpack_require__(302);
 
 	var _QuestionList2 = _interopRequireDefault(_QuestionList);
 
@@ -31063,7 +31334,7 @@
 	exports.default = QuestionListPage;
 
 /***/ }),
-/* 298 */
+/* 302 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31072,7 +31343,7 @@
 	  value: true
 	});
 
-	var _QuestionList = __webpack_require__(299);
+	var _QuestionList = __webpack_require__(303);
 
 	var _QuestionList2 = _interopRequireDefault(_QuestionList);
 
@@ -31081,7 +31352,7 @@
 	exports.default = _QuestionList2.default;
 
 /***/ }),
-/* 299 */
+/* 303 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31192,7 +31463,7 @@
 	exports.default = QuestionList;
 
 /***/ }),
-/* 300 */
+/* 304 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31207,7 +31478,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _PromotionList = __webpack_require__(301);
+	var _PromotionList = __webpack_require__(305);
 
 	var _PromotionList2 = _interopRequireDefault(_PromotionList);
 
@@ -31241,7 +31512,7 @@
 	exports.default = PromotionListPage;
 
 /***/ }),
-/* 301 */
+/* 305 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31293,7 +31564,7 @@
 							_react2.default.createElement(
 								'div',
 								{ className: 'promotion-list__container__image' },
-								_react2.default.createElement('img', { className: 'promotion-list__image', src: 'http://localhost:8080/images/mahaio.jpg' })
+								_react2.default.createElement('img', { className: 'promotion-list__image', src: 'http://infocree.hol.es/images/mahaio.jpg' })
 							),
 							_react2.default.createElement(
 								'h4',
@@ -31307,7 +31578,7 @@
 							_react2.default.createElement(
 								'div',
 								{ className: 'promotion-list__container__image' },
-								_react2.default.createElement('img', { className: 'promotion-list__image', src: 'http://localhost:8080/images/kala.jpg' })
+								_react2.default.createElement('img', { className: 'promotion-list__image', src: 'http://infocree.hol.es/images/kala.jpg' })
 							),
 							_react2.default.createElement(
 								'h4',
@@ -31321,7 +31592,7 @@
 							_react2.default.createElement(
 								'div',
 								{ className: 'promotion-list__container__image' },
-								_react2.default.createElement('img', { className: 'promotion-list__image', src: 'http://localhost:8080/images/sau.jpg' })
+								_react2.default.createElement('img', { className: 'promotion-list__image', src: 'http://infocree.hol.es/images/sau.jpg' })
 							),
 							_react2.default.createElement(
 								'h4',
@@ -31335,7 +31606,7 @@
 							_react2.default.createElement(
 								'div',
 								{ className: 'promotion-list__container__image' },
-								_react2.default.createElement('img', { className: 'promotion-list__image', src: 'http://localhost:8080/images/blu.jpg' })
+								_react2.default.createElement('img', { className: 'promotion-list__image', src: 'http://infocree.hol.es/images/blu.jpg' })
 							),
 							_react2.default.createElement(
 								'h4',
@@ -31349,7 +31620,7 @@
 							_react2.default.createElement(
 								'div',
 								{ className: 'promotion-list__container__image' },
-								_react2.default.createElement('img', { className: 'promotion-list__image', src: 'http://localhost:8080/images/daiki.jpg' })
+								_react2.default.createElement('img', { className: 'promotion-list__image', src: 'http://infocree.hol.es/images/daiki.jpg' })
 							),
 							_react2.default.createElement(
 								'h4',
@@ -31363,7 +31634,7 @@
 							_react2.default.createElement(
 								'div',
 								{ className: 'promotion-list__container__image' },
-								_react2.default.createElement('img', { className: 'promotion-list__image', src: 'http://localhost:8080/images/anagus.jpg' })
+								_react2.default.createElement('img', { className: 'promotion-list__image', src: 'http://infocree.hol.es/images/anagus.jpg' })
 							),
 							_react2.default.createElement(
 								'h4',
@@ -31380,167 +31651,6 @@
 	}(_react.Component);
 
 	exports.default = PromotionList;
-
-/***/ }),
-/* 302 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _Footer = __webpack_require__(303);
-
-	var _Footer2 = _interopRequireDefault(_Footer);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = _Footer2.default;
-
-/***/ }),
-/* 303 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Footer = function (_Component) {
-		_inherits(Footer, _Component);
-
-		function Footer() {
-			_classCallCheck(this, Footer);
-
-			return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
-		}
-
-		_createClass(Footer, [{
-			key: 'render',
-			value: function render() {
-				return _react2.default.createElement(
-					'footer',
-					{ className: 'footer' },
-					_react2.default.createElement(
-						'div',
-						{ className: 'footer__container' },
-						_react2.default.createElement(
-							'div',
-							{ className: 'footer__content' },
-							_react2.default.createElement(
-								'div',
-								{ className: 'footer__container__center' },
-								_react2.default.createElement(
-									'p',
-									{ className: 'footer__date' },
-									'2014-2017'
-								)
-							)
-						),
-						_react2.default.createElement(
-							'div',
-							{ className: 'footer__content' },
-							_react2.default.createElement(
-								'div',
-								{ className: 'footer__container__center footer__container__center--mobile-justify' },
-								_react2.default.createElement('span', { className: 'footer__social__network__icon icon-facebook2' }),
-								_react2.default.createElement('span', { className: 'footer__social__network__icon icon-twitter' }),
-								_react2.default.createElement('span', { className: 'footer__social__network__icon\r footer__social__network__icon--black \r icon-github' })
-							)
-						)
-					)
-				);
-			}
-		}]);
-
-		return Footer;
-	}(_react.Component);
-
-	exports.default = Footer;
-
-/***/ }),
-/* 304 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _WatchVideo = __webpack_require__(305);
-
-	var _WatchVideo2 = _interopRequireDefault(_WatchVideo);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = _WatchVideo2.default;
-
-/***/ }),
-/* 305 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var WatchVideo = function (_Component) {
-		_inherits(WatchVideo, _Component);
-
-		function WatchVideo() {
-			_classCallCheck(this, WatchVideo);
-
-			return _possibleConstructorReturn(this, (WatchVideo.__proto__ || Object.getPrototypeOf(WatchVideo)).apply(this, arguments));
-		}
-
-		_createClass(WatchVideo, [{
-			key: 'render',
-			value: function render() {
-				return _react2.default.createElement(
-					'div',
-					{ className: 'watch-video' },
-					_react2.default.createElement('iframe', { className: 'watch-video__play', src: 'https://www.youtube.com/embed/8lp20JFiB4s' })
-				);
-			}
-		}]);
-
-		return WatchVideo;
-	}(_react.Component);
-
-	exports.default = WatchVideo;
 
 /***/ })
 /******/ ]);
