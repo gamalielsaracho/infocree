@@ -9,7 +9,7 @@ class StudentProfileList extends Component {
 				
 				<div className='student-profile-list__theme'>
 					<div className='student-profile-list__container__image'>
-						<img className='student-profile-list__image' src='https://cdn-images-1.medium.com/max/800/1*TFyTjyu6jLYrKG0WAcPJWw.jpeg'/>
+						<img className='student-profile-list__image' src='http://infocree.hol.es/images/planificar-organizar-conducir-controlar.jpeg'/>
 					</div>
 					<div className='student-profile-list__description'>
 						<h3 className='student-profile-list__theme-title'>Emplear conocimientos científicos, humanísticos y tecnológicos en la práctica laboral de su especialidad y/o prosecución de estudios superiores</h3>
@@ -31,13 +31,13 @@ class StudentProfileList extends Component {
 						</ul>
 					</div>
 					<div className='student-profile-list__container__image'>
-						<img className='student-profile-list__image' src='https://www.exceptionnotfound.net/content/images/2015/04/the-coder.jpg'/>
+						<img className='student-profile-list__image' src='http://infocree.hol.es/images/cientifico-para-el-estudio-y-la-resolucion-de-problemas.jpg'/>
 					</div>
 				</div>
 
 				<div className='student-profile-list__theme'>
 					<div className='student-profile-list__container__image'>
-						<img className='student-profile-list__image' src='https://blogs.adobe.com/digitalmarketing/wp-content/uploads/2015/04/ThinkstockPhotos-477089113-e1429550802497.jpg'/>
+						<img className='student-profile-list__image' src='http://infocree.hol.es/images/manejar-con-solvencia-software-de-aplicaciones-generales.jpg'/>
 					</div>
 					<div className='student-profile-list__description'>
 						<h3 className='student-profile-list__theme-title'>Aplicar habilidades y destrezas en el uso y desarrollo de aplicaciones informáticas</h3>
@@ -62,13 +62,13 @@ class StudentProfileList extends Component {
 						</ul>
 					</div>
 					<div className='student-profile-list__container__image'>
-						<img className='student-profile-list__image' src='https://www.orangehilldev.com/wp-content/uploads/2015/03/developer-working-osx.jpg'/>
+						<img className='student-profile-list__image' src='http://infocree.hol.es/images/utilizar-con-eficiencia-equipos-procedimientos-y-t%C3%A9cnicas.jpg'/>
 					</div>
 				</div>
 
 				<div className='student-profile-list__theme'>
 					<div className='student-profile-list__container__image'>
-						<img className='student-profile-list__image' src='http://static4.businessinsider.com/image/58360a81e02ba72a008b61cf-480/happy-programmer-work.jpg'/>
+						<img className='student-profile-list__image' src='http://infocree.hol.es/images/aplicar-criterios-de-calidad-en-los-procesos.jpg'/>
 					</div>
 					<div className='student-profile-list__description'>
 						<h3 className='student-profile-list__theme-title'>Aplicar el pensamiento crítico y la ética en el manejo de informaciones y en el desempeño de sus funciones</h3>
