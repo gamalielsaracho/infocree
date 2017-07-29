@@ -4,8 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "webpack": "webpack --process --colors --watch",
-    "css": "stylus ./css/app.styl --watch"
+    "webpack": "webpack --minimize --process --colors -p",
+    "css": "stylus ./css/app.styl --watch -c"
   },
   "author": "gamaliel saracho",
   "license": "ISC",
